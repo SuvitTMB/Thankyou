@@ -3,12 +3,8 @@ var MaxRandom = 10;
 
 
 $(document).ready(function () {
-  //if(sessionStorage.getItem("Momday")==null) {
-  //  document.getElementById('id01').style.display='block';
-  //}
 
-  //sessionStorage.clear();
-
+/*
   var str = "";
   var sLineID = "Ua6b6bf745bd9bfd01a180de1a05c23b3";
   var sLineName = "Website";
@@ -19,14 +15,14 @@ $(document).ready(function () {
   str += '<div><img src="'+ sessionStorage.getItem("LinePicture") +'" class="add-profile" width="100px"><div id="DisplayVaccine"></div></div>';
   str += '<div class="NameLine">'+ sessionStorage.getItem("LineName")+'</div>';
   Connect_DB();
+*/
 
-
-  //main();
+  main();
 
 });
 
 async function main() {
-  await liff.init({ liffId: "1655966947-vGw7mRpG" });
+  await liff.init({ liffId: "1655966947-N3Wo3YAG" });
   document.getElementById("isLoggedIn").append(liff.isLoggedIn());
   if(liff.isLoggedIn()) {
     getUserProfile();

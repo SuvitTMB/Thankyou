@@ -1,0 +1,20 @@
+
+@font-face {
+   font-family: ekachon-regular;
+   src: url('../fonts/ekachon-regular.woff2') format('woff2'),
+   url('../fonts/ekachon-regular.woff') format('woff');
+}
+@font-face {
+ font-family: ekachon-bold;
+ src: url('../fonts/ekachon-bold.woff2') format('woff2'),
+ url('../fonts/ekachon-bold.woff') format('woff');
+}
+@font-face {
+   font-family: ekachon-light;
+   src: url('../fonts/ekachon-light.woff2') format('woff2'),
+   url('../fonts/ekachon-light.woff') format('woff');
+}
+div {
+  font-family: ekachon-regular;
+  font-size: 11px;
+}

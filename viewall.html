@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com -->
+  <title>LINE Retail Society</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-PW7HPDW');</script>
+  <!-- End Google Tag Manager -->
+  <link href="./img/favicom.ico" rel="icon">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href='css/ekachon.css' rel="stylesheet" type="text/css">
+  <link href='css/button.css' rel="stylesheet" type="text/css">
+  <link href='css/style.css' rel="stylesheet" type="text/css">
+  <link href='css/vdo.css' rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link href='css/w3.css' rel="stylesheet" type="text/css">
+
+  <link rel='stylesheet' href='https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css'>
+  <link rel='stylesheet' href='https://cdn.datatables.net/buttons/1.2.2/css/buttons.dataTables.min.css'>
+
+    <script src="https://static.line-scdn.net/liff/edge/versions/2.12.0/sdk.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-storage.js"></script>
+
+
+
+  <style type="text/css">
+    @media (min-width: 768px) { margin-left:0px; }
+    .form-control { 
+      text-align: left; font-size: 400 !important; font-size: 12px !important; color:#0056ff;
+      background-color: #f2f4f6;
+    }
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60" style="background-color: #baccdb;">
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PW7HPDW"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+
+  <div class="navbar1">
+    <center>
+      <div style="max-width:400px;">
+        <div class="iconlink" onClick="window.location='home.html';">
+          <div style="width:28px;"><img src="./img/icon-coffee-01.png" style="width:22px;"></div>
+          <div style="font-size: 11px;">หน้าแรก</div>
+        </div>
+        <div class="iconlink" onClick="window.location='display.html';">
+          <div style="width:28px;"><img src="./img/icon-coffee-02.png" style="width:22px;"></div>
+          <div style="font-size: 11px;">ภาพประกวด</div>
+        </div>
+        <div class="iconlink" onClick="window.location='photo.html';">
+          <div style="width:28px;"><img src="./img/icon-coffee-03.png" style="width:22px;"></div>
+          <div style="font-size: 11px;">ส่งภาพ</div>
+        </div>
+        <div class="iconlink" onClick="window.location='viewall.html';" style="background-color: #002d63;">
+          <div style="width:28px;"><img src="./img/icon-coffee-04.png" style="width:22px;"></div>
+          <div style="font-size: 11px;">รายละเอียด</div>
+        </div>
+     </div>
+    </center>
+  </div>
+
+
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#myPage" onclick="location.href='index.html'" style="font-size: 12px;">LINE Retail Society</a>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main">
+    <section id="team" class="team section-bg img-top">
+      <center>
+        <img src="./img/thank-02.jpg" class="img-pic">
+      </center>
+    </section>
+    <div class="clr"></div>
+  </main>
+
+  <main id="detail">
+    <div class="container">
+        <div style="margin:20px auto 0;">
+          <center>
+            <div class="h3div" style="color:#000;margin:30px auto 0px auto;">ภาพถ่ายคุณกับเครื่องดื่มสุดฟิน
+              <div style="font-weight: 400; color:#000; font-size: 11px;margin-top:5px;">เรากำลังมองหาภาพประทับใจกรรมการ <br>เพื่อลุ้นรับรางวัลพิเศษไปฟินกันต่อเลย</div>
+            </div>
+            <div id="OpenData" class="t-table" style="margin-top:10px;">
+              <div style="color:#0056ff;padding:8px;">
+                <select id="ClickMenu" onchange="SelectMeunu()" style="padding: 7px 10px;border-radius: 5px;background: #ffff00; cursor: pointer;">
+                  <option value="RH1">Branch Banking Regional Office 1 - RH1</option>
+                  <option value="RH2">Branch Banking Regional Office 2 - RH2</option>
+                  <option value="RH3">Branch Banking Regional Office 3 - RH3</option>
+                  <option value="RH4">Branch Banking Regional Office 4 - RH4</option>
+                  <option value="RH5">Branch Banking Regional Office 5 - RH5</option>
+                  <option value="RH6">Branch Banking Regional Office 6 - RH6</option>
+                  <!--
+                  <option value="RAL">Retail Advisory Line</option>
+                  <option value="RPD">Retail Partnership Distribution</option>
+                  <option value="SBS">Small Business Sales</option>
+                  <option value="MLS">Mortgage Loan Sales</option>
+                  <option value="WB">Wealth Banking</option>
+                  <option value="RSOC">Retail Strategy and Omni Channel Experience</option>
+                -->
+                  <option value="other">อื่น ๆ</option>
+               </select>
+              </div>
+            </div>
+          </center>
+        </div>
+      </div>
+      <div class="clr"></div>
+
+
+      <div style="margin:10px auto;max-width: 400px; width:90%;">
+        <table id="ex-table" class="display" style="width:100%;font-size: 11px;color:#444444;">
+          <thead>
+            <tr>
+              <th style="width:80%;">ผู้ส่งภาพประกวด</th>
+              <th style="width:10%;">รายการ</th>
+            </tr>
+          </thead>
+        </table>
+      </div>
+    </div>
+  </main>
+
+  <div id="id01" class="w3-modal w3-animate-opacity">
+    <div class="w3-modal-content w3-card-4">
+      <div class="w3-container" style="min-height:300px;padding:24px;width:100%;text-align:center;">
+        <div class="header-Vaccina">บันทึกรายการเรียบร้อยแล้ว</div>
+        <div><img src="./img/thankyou.gif" style="width:100%; margin:20px auto; max-width:250px;"></div>
+
+        <div onclick="CloseAll()" class="btn-t2">ปิดหน้าต่าง</div>
+      </div>
+    </div>
+    <div class="clr" style="height: 70px;"></div>
+  </div>
+
+
+
+<footer class="container-fluid text-center">
+  <a href="#myPage" title="To Top"><span class="glyphicon glyphicon-chevron-up"></span></a>
+  <div style="font-size:12px;font-weight: 600;margin-bottom: 50px;">@<font color="green">LINE</font> <font color="#002d63">Retail</font> <font color="#0056ff">So</font><font color="#f68b1f">ciety</font></div>
+</footer>
+
+<script src='https://code.jquery.com/jquery-1.12.3.js'></script>
+<script src='https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js'></script>
+<script src='https://cdn.datatables.net/buttons/1.2.2/js/dataTables.buttons.min.js'></script>
+<script src='https://cdn.datatables.net/buttons/1.2.2/js/buttons.flash.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js'></script>
+<script src='https://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/pdfmake.min.js'></script>
+<script src='https://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/vfs_fonts.js'></script>
+<script src='https://cdn.datatables.net/buttons/1.2.2/js/buttons.html5.min.js'></script>
+<script src='https://cdn.datatables.net/buttons/1.2.2/js/buttons.print.min.js'></script>
+
+<script src="./js/viewall.js"></script>
+</body>
+</html>
